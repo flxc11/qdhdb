@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7044200E-8CA5-411A-842D-C233AC9B35A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CNVP.UI</RootNamespace>
+    <AssemblyName>CNVP.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Column.cs" />
+    <Compile Include="MessageBox.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CNVP.Cache\CNVP.Cache.csproj">
+      <Project>{123B6D29-6CE9-4CAA-8D83-C4EBE988F0D4}</Project>
+      <Name>CNVP.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CNVP.Config\CNVP.Config.csproj">
+      <Project>{0F805FA6-83C1-4AB2-9AEB-2F0BC25C31B7}</Project>
+      <Name>CNVP.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CNVP.Data\CNVP.Data.csproj">
+      <Project>{8EE24EF9-F7DD-46D8-8E7C-B767CEF8E530}</Project>
+      <Name>CNVP.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CNVP.Framework\CNVP.Framework.csproj">
+      <Project>{9E91A083-4BB9-4201-9D60-5222DE687959}</Project>
+      <Name>CNVP.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CNVP.Model\CNVP.Model.csproj">
+      <Project>{E7D27F9A-D318-42BC-9613-AD1D7E3EF18E}</Project>
+      <Name>CNVP.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

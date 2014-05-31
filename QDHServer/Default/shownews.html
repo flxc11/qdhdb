@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="loading">
+<head>
+    <!--unit name="网站参数"-->网站参数<!--/unit-->
+    <link rel="stylesheet" href="css/Global.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css"/>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/MSClass.js"></script>
+    <script src="scripts/jquery.jcarousel.min.js"></script>
+    <script src="scripts/common.js?time=new Date().getTime()"></script>
+    <script src="scripts/jquery.mousewheel.js"></script>
+    <script src="scripts/jquery.jscrollpane.min.js"></script>
+    <script src="scripts/cnvp.js"></script>
+    <script type="text/javascript">
+        $(function()
+        {
+            $('.scroll-pane').jScrollPane({
+                showArrows: true,
+                arrowScrollOnHover: true,
+                otherUpArrows: 'a.news_list_jspArrowUp',
+                otherDownArrows: 'a.news_list_jspArrowDown'
+            });
+        });
+    </script>
+    <style type="text/css" id="page-css">
+        /* Styles specific to this particular page */
+        .scroll-pane
+        {
+            width: 100%;
+            height: 990px;
+            overflow: auto;
+        }
+        .jspVerticalBar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="main bg1">
+        <div class="header clearfix" style="height: 145px">
+            <span class="back"><!--unit name="返回按钮"-->返回按钮<!--/unit--></span>
+            <div class="position"><!--unit name="列表_当前位置"-->列表_当前位置<!--/unit--></div>
+        </div>
+        <div class="shownews">
+            <a href="javascript:;" class="jspArrow news_list_jspArrowUp jspDisabled">
+                <img src="images/arrow_up.png"></a>
+            <a href="javascript:;" class="jspArrow news_list_jspArrowDown jspDisabled">
+                <img src="images/arrow_down.png"></a>
+            <div class="scroll-pane"><!--unit name="列表_新闻内页"-->列表_新闻内页<!--/unit-->
+
+            </div>
+        </div>
+        <div class="bottom">
+            <div id="hottitle" class="hot">
+                <ul id="ulid">
+                    <!--unit name="网站底部"-->网站底部<!--/unit-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--unit name="页面加载"-->页面加载<!--/unit-->
+<script>
+    new Marquee(["hottitle","ulid"],2,2,986,103,20,0,0);
+</script>
+</body>
+</html>

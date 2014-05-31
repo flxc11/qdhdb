@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Flash Properties</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="noindex, nofollow" name="robots">
+<script src="common/fck_dialog_common.js" type="text/javascript"></script>
+<script src="fck_flv/fck_flv.js" type="text/javascript"></script>
+<script type="text/javascript">
+document.write(FCKTools.GetStyleHtml(GetCommonDialogCss()));
+</script>
+</head>
+<body scroll="no" style="OVERFLOW: hidden">
+<div id="divUpload">
+<iframe id="frmUpload" src="" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+</div>
+<div id="divNetwork" style="display:none">
+<table cellSpacing="1" cellPadding="1" width="100%" border="0">
+<tr>
+<td>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tr>
+<td width="100%">
+<span fckLang="DlgVideoURL">URL</span>
+</td>
+<td id="tdBrowse" nowrap="nowrap" rowspan="2" style="display:none">
+&nbsp;
+<input id="btnBrowse" onClick="BrowseServer();" type="button" value="浏览..."/>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<input id="txtUrl" onBlur="UpdatePreview();" style="WIDTH: 100%" type="text">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table cellSpacing="0" cellPadding="0" border="0">
+<TR>
+<TD nowrap>
+<span fckLang="DlgVideoWidth">Width</span><br>
+<input id="txtWidth" onKeyPress="return IsDigit(event);" type="text" size="3" value="300">
+</TD>
+<TD>&nbsp;</TD>
+<TD>
+<span fckLang="DlgVideoHeight">Height</span><br>
+<input id="txtHeight" onKeyPress="return IsDigit(event);" type="text" size="3" value="300">
+</TD>
+</TR>
+</table>
+</td>
+</tr>
+<tr>
+<td vAlign="top" width="100%">
+<table cellSpacing="0" cellPadding="0" width="100%">
+<tr>
+<td><span fckLang="DlgImgPreview">Preview</span></td>
+</tr>
+<tr>
+<td id="ePreviewCell" valign="top" class="FlashPreviewArea"><iframe src="fck_flv/fck_flv_preview.html" frameborder="0" marginheight="0" marginwidth="0"></iframe></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id="divBrowse" style="display:none">
+<iframe id="frmBrowse" src="" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿body 
+{
+	margin:0px;
+}
+html
+{
+	margin:0px;
+}
+
+.Navigation
+{
+	margin:0px 0px 5px 0px;
+	padding:9px 0px 0px 25px;
+	height:30px;
+	background-color:Gray;
+	vertical-align:middle;
+	background:url(../images/adminleftmenum.gif) 39px;
+}
+
+
+.Operate
+{
+	margin:0px 0px 15px 0px;
+	padding:5px 0px 0px 45px;
+	height:46px;
+	background-color:#5e7fa8;
+	vertical-align:middle;
+	color:White;
+}
+
+.Operate_Exp
+{
+	margin:0px 0px 15px 0px;
+	padding:5px 0px 0px 45px;
+	height:71px;
+	background-color:#5e7fa8;
+	vertical-align:middle;
+	color:White;
+}
+
+.LeftRightCenter
+{
+	margin:0 auto;
+	text-align:center;
+}
+
+.TopBottonCenter
+{
+}
+
+.AllCenter
+{
+}
+
+.table_head_style{
+	background:#327ADE url('../images/tr.gif') repeat-x;
+	text-align:center;
+	line-height:26px;
+	color:#ffffff;
+}
+
+.HideDiv
+{
+	margin:0px;
+	padding:0px;
+	text-align:center;
+	display:block;
+	visibility:hidden;
+}
+
+.tdLabel{ text-align:center;white-space: nowrap;vertical-align:middle; height:34px}
+.tdTextbox{ text-align:left;background-color: #f7f7f7; vertical-align:middle; height:34px}

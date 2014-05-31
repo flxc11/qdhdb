@@ -1,0 +1,8 @@
+F:\亚通-技术部\个人文件\邵高仁\千岛湖\千岛湖\BaseConfig\bin\Debug\BaseConfig.dll
+F:\亚通-技术部\个人文件\邵高仁\千岛湖\千岛湖\BaseConfig\bin\Debug\BaseConfig.pdb
+F:\亚通-技术部\个人文件\邵高仁\千岛湖\千岛湖\BaseConfig\obj\Debug\BaseConfig.dll
+F:\亚通-技术部\个人文件\邵高仁\千岛湖\千岛湖\BaseConfig\obj\Debug\BaseConfig.pdb
+D:\工作文件\工作文件夹\14年\5月份\[14-05-26]千岛湖\BaseConfig\bin\Debug\BaseConfig.dll
+D:\工作文件\工作文件夹\14年\5月份\[14-05-26]千岛湖\BaseConfig\bin\Debug\BaseConfig.pdb
+D:\工作文件\工作文件夹\14年\5月份\[14-05-26]千岛湖\BaseConfig\obj\Debug\BaseConfig.dll
+D:\工作文件\工作文件夹\14年\5月份\[14-05-26]千岛湖\BaseConfig\obj\Debug\BaseConfig.pdb

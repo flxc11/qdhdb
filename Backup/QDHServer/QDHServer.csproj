@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{078E45C8-9F21-47A6-A23A-76514D4E9BC5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QDHServer</RootNamespace>
+    <AssemblyName>QDHServer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager">
+      <HintPath>..\..\..\彩票\Lottery\Lottery\bin\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ad\ADManagements\ScreenAD.aspx" />
+    <Content Include="ad\GroupManagements\AddTerminal.aspx" />
+    <Content Include="ad\GroupManagements\GroupManagement.aspx" />
+    <Content Include="ad\GroupManagements\UpdateTerminal.aspx" />
+    <Content Include="ad\TerminalManagements\AddTerminal.aspx" />
+    <Content Include="ad\TerminalManagements\TerminalManagement.aspx" />
+    <Content Include="ad\TerminalManagements\UpdateTerminal.aspx" />
+    <Content Include="ad\TermialLook\DetailShowPic.aspx" />
+    <Content Include="ad\TermialLook\TermialLooks.aspx" />
+    <Content Include="ad\TermialLook\DetailShowVideo.aspx" />
+    <Content Include="ad\TermialLook\DetailTermial.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ad\ADManagements\ScreenAD.aspx.cs">
+      <DependentUpon>ScreenAD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad\ADManagements\ScreenAD.aspx.designer.cs">
+      <DependentUpon>ScreenAD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ad\GroupManagements\AddTerminal.aspx.cs">
+      <DependentUpon>AddTerminal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad\GroupManagements\AddTerminal.aspx.designer.cs">
+      <DependentUpon>AddTerminal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ad\GroupManagements\GroupManagement.aspx.cs">
+      <DependentUpon>GroupManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad\GroupManagements\GroupManagement.aspx.designer.cs">
+      <DependentUpon>GroupManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ad\GroupManagements\UpdateTerminal.aspx.cs">
+      <DependentUpon>UpdateTerminal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad\GroupManagements\UpdateTerminal.aspx.designer.cs">
+      <DependentUpon>UpdateTerminal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ad\TerminalManagements\AddTerminal.aspx.cs">
+      <DependentUpon>AddTerminal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad\TerminalManagements\AddTerminal.aspx.designer.cs">
+      <DependentUpon>AddTerminal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ad\TerminalManagements\TerminalManagement.aspx.cs">
+      <DependentUpon>TerminalManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad\TerminalManagements\TerminalManagement.aspx.designer.cs">
+      <DependentUpon>TerminalManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ad\TerminalManagements\UpdateTerminal.aspx.cs">
+      <DependentUpon>UpdateTerminal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad\TerminalManagements\UpdateTerminal.aspx.designer.cs">
+      <DependentUpon>UpdateTerminal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ad\TermialLook\DetailShowPic.aspx.cs">
+      <DependentUpon>DetailShowPic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad\TermialLook\DetailShowPic.aspx.designer.cs">
+      <DependentUpon>DetailShowPic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ad\TermialLook\TermialLooks.aspx.cs">
+      <DependentUpon>TermialLooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad\TermialLook\TermialLooks.aspx.designer.cs">
+      <DependentUpon>TermialLooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ad\TermialLook\DetailShowVideo.aspx.cs">
+      <DependentUpon>DetailShowVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad\TermialLook\DetailShowVideo.aspx.designer.cs">
+      <DependentUpon>DetailShowVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ad\TermialLook\DetailTermial.aspx.cs">
+      <DependentUpon>DetailTermial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad\TermialLook\DetailTermial.aspx.designer.cs">
+      <DependentUpon>DetailTermial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseConfig\QDHConfig.csproj">
+      <Project>{C6341620-9648-402D-86EF-96A6489F6027}</Project>
+      <Name>QDHConfig</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ad\images\" />
+    <Folder Include="AppCode\" />
+    <Folder Include="css\" />
+    <Folder Include="js\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51130</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

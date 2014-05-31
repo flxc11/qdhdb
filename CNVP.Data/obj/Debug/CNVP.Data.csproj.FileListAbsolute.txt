@@ -1,0 +1,11 @@
+D:\工作文件\工作文件夹\14年\5月份\[14-05-26]千岛湖\CNVP.Data\bin\Debug\CNVP.Data.dll
+D:\工作文件\工作文件夹\14年\5月份\[14-05-26]千岛湖\CNVP.Data\bin\Debug\CNVP.Data.pdb
+D:\工作文件\工作文件夹\14年\5月份\[14-05-26]千岛湖\CNVP.Data\bin\Debug\CNVP.Framework.dll
+D:\工作文件\工作文件夹\14年\5月份\[14-05-26]千岛湖\CNVP.Data\bin\Debug\CNVP.Model.dll
+D:\工作文件\工作文件夹\14年\5月份\[14-05-26]千岛湖\CNVP.Data\bin\Debug\BaseConfig.dll
+D:\工作文件\工作文件夹\14年\5月份\[14-05-26]千岛湖\CNVP.Data\bin\Debug\CNVP.Framework.pdb
+D:\工作文件\工作文件夹\14年\5月份\[14-05-26]千岛湖\CNVP.Data\bin\Debug\CNVP.Model.pdb
+D:\工作文件\工作文件夹\14年\5月份\[14-05-26]千岛湖\CNVP.Data\bin\Debug\BaseConfig.pdb
+D:\工作文件\工作文件夹\14年\5月份\[14-05-26]千岛湖\CNVP.Data\obj\Debug\CNVP.Data.csprojResolveAssemblyReference.cache
+D:\工作文件\工作文件夹\14年\5月份\[14-05-26]千岛湖\CNVP.Data\obj\Debug\CNVP.Data.dll
+D:\工作文件\工作文件夹\14年\5月份\[14-05-26]千岛湖\CNVP.Data\obj\Debug\CNVP.Data.pdb

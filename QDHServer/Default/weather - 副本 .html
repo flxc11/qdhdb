@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="loading">
+<head>
+    <!--unit name="网站参数"-->网站参数<!--/unit-->
+    <link rel="stylesheet" href="css/Global.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/MSClass.js"></script>
+    <script src="scripts/Calendar.js"></script>
+    <script src="scripts/cnvp.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="main bg2 posa">
+        <div class="header clearfix" style="height: 145px">
+            <span class="back"><!--unit name="返回按钮"-->返回按钮<!--/unit--></span>
+            <div class="position"><!--unit name="列表_当前位置"-->列表_当前位置<!--/unit--></div>
+        </div>
+        <div class="ny_weather">
+            <div class="ny_weather_td">
+                <h2 class="ny_today">
+                    <script>showLocale1();</script>
+                </h2>
+                <h2 class="ny_day">
+                    
+                </h2>
+                <div class="clearfix" style="width:1005px; overflow: hidden;" id="wez_next">
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="bottom">
+            <div id="hottitle" class="hot">
+                <ul id="ulid">
+                    <!--unit name="网站底部"-->网站底部<!--/unit-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--unit name="页面加载"-->页面加载<!--/unit-->
+</body>
+<script>
+    function GetWea() {
+        var _var = "";
+        var reg_num = /\d/;   //图片名称
+        var reg_space = /\s.*/   //去空格
+        var _timeurl = "";
+        $.ajax({
+            url: '/webajax.aspx',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                Time: (new Date().getTime()),
+                Action: "GetNextWeather"
+            },
+        })
+        .done(function(d) {
+            //今天的天气情况
+            Date.prototype.addDays = function(d)
+            {
+                this.setDate(this.getDate() + d);
+            };
+            var _wea = new Array();
+            var _today = "";
+            _wea = d.weather.split('$');
+            var img1 = _wea[3];
+            var _num = "0" + img1.match(reg_num);
+                _num = _num.substring(_num.length - 2, _num.length);
+            var _gy = _wea[0].match(reg_space);
+            _today = '<span class="ny_1">今天</span>' + 
+                     '<span class="ny_2"><img src="images/day/' + _num + '.png" alt="">' + _gy + '</span>' + 
+                     '<span class="ny_3">' + _wea[1] + '</span>' + 
+                     '<span class="ny_4">风向：' + _wea[2] + '</span>';
+            $(".ny_day").html(_today);
+
+            //未来6天的天气情况
+            var _div = "";
+            var _num_next = "";
+            var _now = new Date();
+            for (var n = 1; n <= 6; n++) {
+                _num_next = "0" + _wea[n*5 + 3].match(reg_num);
+                var _now_next = new Date(_now.valueOf() + n*24*60*60*1000);
+                _div += '<div class="ny_next">';
+                _div +=     '<h2>' + showLocale2(_now_next) + '</h2>';
+                _div +=         '<dl>';
+                _div +=             '<dt><img src="images/day/' + _num_next.substring(_num_next.length - 2, _num_next.length) + '.png"  /></dt>';
+                _div +=             '<dd class="w_txt">';
+                _div +=                 _wea[n*5].match(reg_space) + '<br />';
+                _div +=                 '<em>' + _wea[n*5 + 1] + '</em><br />';
+                _div +=                  _wea[n*5 + 2];
+                _div +=             '</dd>';
+                _div +=         '</dl>';
+                _div +=     '</div>';
+            };
+            $("#wez_next").html(_div);
+        })
+        .fail(function() {
+            console.log("error");
+        })
+        .always(function() {
+            console.log("complete");
+        });
+        
+    }
+</script>
+<script>
+    $(function(){
+        GetWea();
+    })
+    new Marquee(["hottitle","ulid"],2,2,986,103,20,0,0);
+    function showLocale2(obj)
+    {
+        var objD = obj;
+        var str,colorhead,colorfoot;
+        var yy = objD.getYear();
+        if(yy<1900) yy = yy+1900;
+        var MM = objD.getMonth()+1;
+        if(MM<10) MM = '0' + MM;
+        var dd = objD.getDate();
+        if(dd<10) dd = '0' + dd;
+        var hh = objD.getHours();
+        if(hh<10) hh = '0' + hh;
+        var mm = objD.getMinutes();
+        if(mm<10) mm = '0' + mm;
+        var ss = objD.getSeconds();
+        if(ss<10) ss = '0' + ss;
+        var ww = objD.getDay();
+        if  (ww==0)  ww="星期日";
+        if  (ww==1)  ww="星期一";
+        if  (ww==2)  ww="星期二";
+        if  (ww==3)  ww="星期三";
+        if  (ww==4)  ww="星期四";
+        if  (ww==5)  ww="星期五";
+        if  (ww==6)  ww="星期六";
+        str = yy + "-" + MM + "-" + dd + " " + ww;
+        return str;
+    }
+</script>
+</html>

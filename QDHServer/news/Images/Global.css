@@ -1,0 +1,48 @@
+﻿*{
+  scrollbar-3dlight-color:#D4D0C8; /*- 最外左 -*/
+  scrollbar-highlight-color:#fff; /*- 左二 -*/
+  scrollbar-face-color:#E4E4E4; /*- 面子 -*/
+  scrollbar-arrow-color:#666; /*- 箭头 -*/
+  scrollbar-shadow-color:#808080; /*- 右二 -*/
+  scrollbar-darkshadow-color:#D7DCE0; /*- 右一 -*/
+  scrollbar-base-color:#D7DCE0; /*- 基色 -*/
+  scrollbar-track-color:#;/*- 滑道 -*/
+}
+html {overflow:hidden;overflow-y:auto;margin:0px;padding:0px;}
+body{margin:0px;padding:5px;font-size:13px;color:#666666;font-family:'宋体',Verdana;}
+table,td{font-size:13px;}
+form,img{margin:0px;padding:0px;border:0px}
+.unit_table{background-color:#9db3c5}
+.title_group{height:17px;text-align:left;background-color:#eaf1fb;padding:4px;}
+.cell_group{height:17px;text-align:left;background-color:#eaf1fb;padding:4px;border:solid 1px #9db3c5}
+.cell_title{height:22px;text-align:left;background-color:#b4cad5; padding:3px}
+.cell_left{line-height:22px;text-align:left;background-color:#f7fafb;padding:3px}
+.cell_center{line-height:22px;text-align:center;background-color:#f7fafb;padding:3px}
+.cell_right{line-height:22px;background-color:#f7fafb;text-align:right;padding:3px;}
+a{color:#666666;text-decoration:none;}
+a:hover,a:active{text-decoration:underline}
+.list_btn{width:45px;height:45px;display:block;float:left;text-align:center;border:solid 1px #FFF}
+.list_btn:hover {border:solid 1px #CCC}
+.list_btn1{width:45px;height:22px;text-align:center;border:solid 1px #FFF}
+.list_btn2{width:45px;height:22px;text-align:center;border:solid 1px #BADAFF; color:Blue;}
+.list_btn2:hover{border:solid 1px #CCC}
+.list_tb{border:1px solid #9db3c5; border-bottom:0px}
+.list_tb th {background:url(../Images/ListTableBg.jpg) repeat-x;border-bottom:1px solid #9db3c5;line-height:25px;height:25px;text-align:left;} 
+.list_tb td {padding:2px;border-bottom:1px solid #9db3c5;vertical-align:top;text-align:left;height:22px;line-height:22px} 
+.list_tb td * {padding:2px;} 
+.list_tb tr.alt td {background:#ecf6fc;} 
+.list_tb tr.over td {background:#FEF3D1;}
+.list_search_input{width:180px;height:18px;line-height:18px;border:1px solid #CCCCCC}
+.list_search_btn{width:60px;height:22px;border:1px solid #CCCCCC}
+.link_quedetail{cursor:hand;text-decoration:underline;padding-left:10px;}
+.div_quedetail{border: 1px solid #ADB0B1;position:absolute;width:300px;height:150px;padding:5px;background-color:#F9F9F9;display:none;}
+.div_quedetail_cms{border: 1px solid #ADB0B1;position:absolute;width:350px;height:230px;padding:5px;background-color:#F9F9F9;display:none;}
+.pop_button{font-size:13px;color:#2b333c;padding-top:1px;height:25px;width:70px;border-right:#acb5b5 1px double; border-top:#c4cccc 1px double;background: #ffffff repeat-x;border-left: #acb5b5 1px double;border-bottom:#6f7777 1px double;}
+.cancel_button{font-size:13px;color:#2b333c;padding-top:1px;height:25px;width:40px;border-right:#acb5b5 1px double; border-top:#c4cccc 1px double;background: #ffffff repeat-x;border-left: #acb5b5 1px double;border-bottom:#6f7777 1px double;}
+.pop_select{border:0px;width:200px;height:270px;background:#f7fafb;}
+.pop_input{width:200px;height:20px;line-height:20px;border:1px solid #CCCCCC}
+.warning{color:#F00}
+.div_tip{position: absolute;border: 1px solid #ff6c3e;padding:1px;background-color:#ffffff;top:35%;left:35%;width:260px;height:30px;}
+.tip_image{background-image:url(Loading.gif);background-repeat:no-repeat;background-position:0px center;width:50px;height:30px;padding:5px; text-indent:10px}
+.tip_content{width:100%;font-weight:bold;text-align:center;height:30px;line-height:30px;list-style:none;padding-left:5px}
+.div_tip1{position:absolute;top:35%;left:35%;}

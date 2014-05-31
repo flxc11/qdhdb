@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="loading">
+<head>
+    <!--unit name="网站参数"-->网站参数<!--/unit-->
+    <link rel="stylesheet" href="css/Global.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/MSClass.js"></script>
+    <script src="scripts/common.js?time=new Date().getTime()"></script>
+    <script src="scripts/cnvp.js"></script>
+    <script src="scripts/cookie.js"></script>
+    <style type="text/css">
+        #allmap {width: 100%;height: 1020px;overflow: hidden;margin:0;}
+    </style>
+    <script>
+        function loadScript() {
+            var script = document.createElement("script");
+            script.src = "http://api.map.baidu.com/api?v=2.0&ak=A64c45baa3b620dbd1a457d740c6ec2e&callback=GetMAC";
+            document.body.appendChild(script);
+        }
+        window.onload = loadScript;
+        // 百度地图API功能
+        function initialize(coodrinate) {
+            var strs = new Array();
+            strs = coodrinate.split(",");
+            var point = new BMap.Point(strs[0],strs[1]);
+            var map = new BMap.Map("allmap");            // 创建Map实例
+            map.centerAndZoom(point, 18);
+            var myKeys = ["酒店", "KTV", "美食"];
+            var local = new BMap.LocalSearch(map, {
+                renderOptions:{map: map, panel:"r-result"}
+            });
+            local.setPageCapacity(15);
+            local.searchInBounds(myKeys, map.getBounds());
+        }
+
+        function GetMAC() {
+
+            var MAC = $.cookie("MACAdd");
+            var _Mac = MAC;
+            $.ajax({
+                type: "post",
+                dataType: "json",
+                url: "/webajax.aspx?Time=" + (new Date().getTime()),
+                data: {
+                    Action: "GetMAC",
+                    Address: _Mac
+                },
+                error: function(){
+
+                },
+                success: function(d){
+                    var local_coodri = "119.048272,29.614964";
+                    if (d.retuanval == "OK") {
+                        var _coodri = d.coordinate || local_coodri;
+                        initialize(_coodri);
+                    }
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="main bg1">
+        <div class="header clearfix">
+            <span class="back"><!--unit name="返回按钮"-->返回按钮<!--/unit--></span>
+            <div class="position"><!--unit name="列表_当前位置"-->列表_当前位置<!--/unit--></div>
+        </div>
+        <div class="map" id="allmap">
+
+        </div>
+        <div class="bottom">
+            <div id="hottitle" class="hot">
+                <ul id="ulid">
+                    <!--unit name="网站底部"-->网站底部<!--/unit-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--unit name="页面加载"-->页面加载<!--/unit-->
+</body>
+<script>
+    new Marquee(["hottitle","ulid"],2,2,986,103,20,0,0);
+</script>
+</html>

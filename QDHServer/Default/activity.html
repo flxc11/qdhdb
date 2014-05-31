@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="loading">
+<head>
+    <!--unit name="网站参数"-->网站参数<!--/unit-->
+    <link rel="stylesheet" href="css/Global.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/MSClass.js"></script>
+    <script src="scripts/Calendar.js"></script>
+</head>
+<body onload="initial()">
+<div class="wrapper">
+
+    <div class="main bg2 posa">
+        <div class="icon1 icon_next"></div>
+        <div class="icon1 icon_prev"></div>
+        <div class="header clearfix" style="height: 145px">
+            <span class="back"><!--unit name="返回按钮"-->返回按钮<!--/unit--></span>
+            <div class="position"><!--unit name="列表_当前位置"-->列表_当前位置<!--/unit--></div>
+        </div>
+        <div class="calendar">
+            <form name=CLD>
+                <table>
+                    <tr>
+                        <td align=middle>
+                            <table border="0" cellpadding="0" cellspacing="0" class="calendar_table" align="center">
+                                <tr>
+                                    <td colSpan="7" align="center">
+                                        <div id="CurrentTR" class="calendar_td3">
+                                            <p class="p_month">
+                                                <span class="zn"></span>
+                                                <span class="en"></span>
+                                            </p>
+                                            <p class="p_year"></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="calendar_tr1">
+                                    <td width="120" height="50" align="center">日</td>
+                                    <td width="120" align="center">一</td>
+                                    <td width="120" align="center">二</td>
+                                    <td width="120" align="center">三</td>
+                                    <td width="120" align="center">四</td>
+                                    <td width="120" align="center">五</td>
+                                    <td width="120" align="center">六</td>
+                                </tr>
+                                <script type="text/javascript">
+                                    var gNum;
+                                    for(i=0;i<6;i++) {
+                                        document.write('<tr align="center" class="calendar_tr2">');
+                                        for(j=0;j<7;j++) {
+                                            gNum = i*7+j;
+                                            document.write('<td valign="top" id="GD' + gNum +'" align="left" height="124">');
+                                            document.write('<span style="font-size:16px;line-height:16px;padding-top:5px;display:block;" id="SD' + gNum +'"></span>');
+                                            document.write('<span class="nl" id="LD' + gNum + '"> </span>');
+                                            document.write("<div></span>");
+                                            document.write('</td>');
+                                        }
+                                        document.write('</tr>');
+                                    }
+                                </script>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="bottom">
+            <div id="hottitle" class="hot">
+                <ul id="ulid">
+                    <!--unit name="网站底部"-->网站底部<!--/unit-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--unit name="页面加载"-->页面加载<!--/unit-->
+</body>
+<script src="scripts/cnvp.js"></script>
+<script>
+    $(function(){
+        //window.setTimeout("GoIndex()",3*60*1000);
+        var now = new Date();
+        var year1 = now.getFullYear();
+        var month1 = now.getMonth();
+        $(".icon_next").on("click", function(){
+            now.addMonths(1);
+            var year1 = now.getFullYear();
+            var month1 = now.getMonth();
+            $(".calendar_table div").html("");
+            $(".calendar_tr2 td").removeClass("td_news");
+            monName = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+            document.getElementById("CurrentTR").innerHTML ='<p class="p_month">'
+                    + '<span class="cn">' + (month1 + 1) + "月" + '</span>'
+                    + '<span class="en">' + monName[month1] + '</span>'
+                    + '</p>' +
+                    '<p class="p_year">' + year1 + '</p>';
+            drawCld(year1,month1);
+
+            bindDatas(year1,month1);
+        })
+        $(".icon_prev").on("click", function(){
+            now.addMonths(-1);
+            var year1 = now.getFullYear();
+            var month1 = now.getMonth();
+            $(".calendar_table div").html("");
+            monName = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+            document.getElementById("CurrentTR").innerHTML ='<p class="p_month">'
+                    + '<span class="cn">' + (month1 + 1) + "月" + '</span>'
+                    + '<span class="en">' + monName[month1] + '</span>'
+                    + '</p>' +
+                    '<p class="p_year">' + year1 + '</p>';
+            drawCld(year1,month1);
+            bindDatas(year1,month1);
+        })
+        bindDatas(year1,month1);
+    })
+    new Marquee(["hottitle","ulid"],2,2,986,103,20,0,0);
+
+    function bindDatas(y, m){
+        var c_m = m + 1;
+        c_m = ("0" + c_m);
+        c_m = c_m.slice(c_m.length - 2,c_m.length);
+        $.ajax({
+            type:'POST',
+            url:'/webajax.aspx',
+            data:'Action=GetDate&dateMon=' + y + '/' + c_m + '&Time=' + (new Date().getTime()),
+            error:function(){
+                alert('服务运行异常，请联系系统管理员！');
+            },
+            success:function(d){
+                var datestr = ""
+                var columnstr = "";
+                var dateID = "";
+                var datestr = d.dateday;
+                var columnstr = d.dateColumnID;
+                var dateID = d.dateID;
+                var dateTitle = d.dateTitle;
+                var datestrs = new Array();
+                var columnstrs = new Array();
+                var dateIDs = new Array();
+                var dateTitles = new Array();
+                datestrs = datestr.split("|");
+                columnstrs = columnstr.split("|");
+                dateIDs = dateID.split("|");
+                dateTitles = dateTitle.split("|");
+                if(datestrs.length>0 && datestrs !=null && datestrs !=""){
+                    for(var i = 0, len = datestrs.length; i < len; i++){
+                        $("input[class='Crt_day'][value='" + datestrs[i] + "']").parent().next().next("div").append("<a style='color:#fff;display:block;' href=/Art/Art_" + columnstrs[i] + "/Art_" + columnstrs[i] + "_" + dateIDs[i]+".aspx>" + CutString(dateTitles[i], 8) + "</a>")
+                        //calr.Days[datestrs[i]].innerHTML = "<a target=_blank href=/Art/Art_" + columnstrs[i] + "/Art_" + columnstrs[i] + "_" + dateIDs[i]+".aspx><font color=E95F00>" + datestrs[i] + "</font></a>";
+                        $("input[class='Crt_day'][value='" + datestrs[i] + "']")
+                                .parents("td")
+                                .addClass("td_news");
+
+                    }
+                }
+
+            }
+        })
+    }
+</script>
+</html>

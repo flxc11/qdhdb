@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Templates imagesBasePath="fck_template/images/">
+  <Template title="标题+五角星+抄送" image="template1.gif">
+	  <Description>支持显示红头文件标题；包含有五角星(政府专用)红线样式；支持显示文件抄送样式。</Description>
+	  <Html>
+		  <![CDATA[
+      <table border="0" cellspacing="0" cellpadding="0" width="600" align="center">
+        <tbody>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=HeadTitle&amp;HeadTitle=某某人民政府红头文件&amp;IsBold=True&amp;FontColor=FF0000&amp;FontSize=30&amp;BgColor=FFFFFF" /></td>
+            </tr>
+            <tr>
+                <td height="50" colspan="2" style="text-align: center; font-size: 16px"><span style="font-family: 仿宋_GB2312">市政府[</span>2011]17号</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=HeadLine&amp;Width=700&amp;Height=3&amp;FontColor=FF0000&amp;BgColor=FFFFFF&amp;IsStart=True" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 20px">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center; line-height: 180%; font-family: 仿宋_GB2312; height: 50px; font-size: 20px; font-weight: bolder">某某人民政府<br />
+                关于印发《某某规范基本建设收费<br />
+                暂行规定》的通知</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 20px">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="line-height: 180%; font-family: 仿宋_GB2312; font-size: 14px; vertical-align: top">各乡镇人民政府，市属、县直各有关单位：<br />
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 经某某政府常务会议研究同意，现将《某某规范基本建设收费暂行规定》印发给你们，请认真遵照执行。 <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <div style="text-align: right">二〇一一年一月一日</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="font-family: 仿宋_GB2312; height: 30px; font-size: 14px">主题词：主题词一 主题词二</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=Footer&amp;FontColor=000000&amp;Width=700&amp;Height=1&amp;IsStart=False" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="font-family: 仿宋_GB2312; height: 30px; font-size: 14px">抄送：部门一 部门二</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: right; font-family: 仿宋_GB2312; height: 20px; font-size: 14px">共印160份</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=Footer&amp;FontColor=000000&amp;Width=700&amp;Height=1&amp;IsStart=False" /></td>
+            </tr>
+            <tr>
+                <td style="font-family: 仿宋_GB2312; height: 30px; font-size: 14px">某某人民政府办公室</td>
+                <td style="text-align: right; font-family: 仿宋_GB2312; height: 30px; font-size: 14px">2011年01月01日印</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=Footer&amp;FontColor=000000&amp;Width=700&amp;Height=1&amp;IsStart=False" /></td>
+            </tr>
+        </tbody>
+      </table>
+		  ]]>
+	  </Html>
+  </Template>
+  <Template title="标题+五角星" image="template2.gif">
+    <Description>支持显示红头文件标题；包含有五角星(政府专用)红线样式；</Description>
+    <Html>
+      <![CDATA[
+      <table border="0" cellspacing="0" cellpadding="0" width="600" align="center">
+        <tbody>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=HeadTitle&amp;HeadTitle=某某人民政府红头文件&amp;IsBold=True&amp;FontColor=FF0000&amp;FontSize=30&amp;BgColor=FFFFFF" /></td>
+            </tr>
+            <tr>
+                <td height="50" colspan="2" style="text-align: center; font-size: 16px"><span style="font-family: 仿宋_GB2312">市政府[</span>2011]17号</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=HeadLine&amp;Width=700&amp;Height=3&amp;FontColor=FF0000&amp;BgColor=FFFFFF&amp;IsStart=True" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 20px">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center; line-height: 180%; font-family: 仿宋_GB2312; height: 50px; font-size: 20px; font-weight: bolder">某某人民政府<br />
+                关于印发《某某规范基本建设收费<br />
+                暂行规定》的通知</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 20px">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="line-height: 180%; font-family: 仿宋_GB2312; font-size: 14px; vertical-align: top">各乡镇人民政府，市属、县直各有关单位：<br />
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 经某某政府常务会议研究同意，现将《某某规范基本建设收费暂行规定》印发给你们，请认真遵照执行。 <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <div style="text-align: right">二〇一一年一月一日</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="font-family: 仿宋_GB2312; height: 30px; font-size: 14px">主题词：主题词一 主题词二</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=Footer&amp;FontColor=000000&amp;Width=700&amp;Height=1&amp;IsStart=False" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="font-family: 仿宋_GB2312; height: 30px; font-size: 14px">抄送：部门一 部门二</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: right; font-family: 仿宋_GB2312; height: 20px; font-size: 14px">共印160份</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=Footer&amp;FontColor=000000&amp;Width=700&amp;Height=1&amp;IsStart=False" /></td>
+            </tr>
+            <tr>
+                <td style="font-family: 仿宋_GB2312; height: 30px; font-size: 14px">某某人民政府办公室</td>
+                <td style="text-align: right; font-family: 仿宋_GB2312; height: 30px; font-size: 14px">2011年01月01日印</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=Footer&amp;FontColor=000000&amp;Width=700&amp;Height=1&amp;IsStart=False" /></td>
+            </tr>
+        </tbody>
+      </table>
+		  ]]>
+    </Html>
+  </Template>
+  <Template title="标题+抄送" image="template3.gif">
+    <Description>支持显示红头文件标题；支持文件抄送功能。</Description>
+    <Html>
+      <![CDATA[
+      <table border="0" cellspacing="0" cellpadding="0" width="600" align="center">
+        <tbody>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=HeadTitle&amp;HeadTitle=某某人民政府红头文件&amp;IsBold=True&amp;FontColor=FF0000&amp;FontSize=30&amp;BgColor=FFFFFF" /></td>
+            </tr>
+            <tr>
+                <td height="50" colspan="2" style="text-align: center; font-size: 16px"><span style="font-family: 仿宋_GB2312">市政府[</span>2011]17号</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=HeadLine&amp;Width=700&amp;Height=3&amp;FontColor=FF0000&amp;BgColor=FFFFFF" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 20px">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center; line-height: 180%; font-family: 仿宋_GB2312; height: 50px; font-size: 20px; font-weight: bolder">某某人民政府<br />
+                关于印发《某某规范基本建设收费<br />
+                暂行规定》的通知</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 20px">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="line-height: 180%; font-family: 仿宋_GB2312; font-size: 14px; vertical-align: top">各乡镇人民政府，市属、县直各有关单位：<br />
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 经某某政府常务会议研究同意，现将《某某规范基本建设收费暂行规定》印发给你们，请认真遵照执行。 <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <div style="text-align: right">二〇一一年一月一日</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="font-family: 仿宋_GB2312; height: 30px; font-size: 14px">主题词：主题词一 主题词二</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=Footer&amp;FontColor=000000&amp;Width=700&amp;Height=1&amp;IsStart=False" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="font-family: 仿宋_GB2312; height: 30px; font-size: 14px">抄送：部门一 部门二</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: right; font-family: 仿宋_GB2312; height: 20px; font-size: 14px">共印160份</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=Footer&amp;FontColor=000000&amp;Width=700&amp;Height=1&amp;IsStart=False" /></td>
+            </tr>
+            <tr>
+                <td style="font-family: 仿宋_GB2312; height: 30px; font-size: 14px">某某人民政府办公室</td>
+                <td style="text-align: right; font-family: 仿宋_GB2312; height: 30px; font-size: 14px">2011年01月01日印</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=Footer&amp;FontColor=000000&amp;Width=700&amp;Height=1&amp;IsStart=False" /></td>
+            </tr>
+        </tbody>
+      </table>
+		  ]]>
+    </Html>
+  </Template>
+  <Template title="标题" image="template4.gif">
+    <Description>仅支持显示红头文件标题；</Description>
+    <Html>
+      <![CDATA[
+      <table border="0" cellspacing="0" cellpadding="0" width="600" align="center">
+        <tbody>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=HeadTitle&amp;HeadTitle=某某人民政府红头文件&amp;IsBold=True&amp;FontColor=FF0000&amp;FontSize=30&amp;BgColor=FFFFFF" /></td>
+            </tr>
+            <tr>
+                <td height="50" colspan="2" style="text-align: center; font-size: 16px"><span style="font-family: 仿宋_GB2312">市政府[</span>2011]17号</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><img border="0" alt="" src="/API/RedHeader.aspx?Action=HeadLine&amp;Width=700&amp;Height=3&amp;FontColor=FF0000&amp;BgColor=FFFFFF&amp;IsStart=True" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 20px">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center; line-height: 180%; font-family: 仿宋_GB2312; height: 50px; font-size: 20px; font-weight: bolder">某某人民政府<br />
+                关于印发《某某规范基本建设收费<br />
+                暂行规定》的通知</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 20px">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="line-height: 180%; font-family: 仿宋_GB2312;font-size: 14px; vertical-align: top">各乡镇人民政府，市属、县直各有关单位：<br />
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 经某某政府常务会议研究同意，现将《某某规范基本建设收费暂行规定》印发给你们，请认真遵照执行。 <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <div style="text-align: right">二〇一一年一月一日</div>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+		  ]]>
+    </Html>
+  </Template>
+</Templates>

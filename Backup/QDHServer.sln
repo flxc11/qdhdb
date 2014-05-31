@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QDHServer", "QDHServer\QDHServer.csproj", "{078E45C8-9F21-47A6-A23A-76514D4E9BC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QDHConfig", "BaseConfig\QDHConfig.csproj", "{C6341620-9648-402D-86EF-96A6489F6027}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{078E45C8-9F21-47A6-A23A-76514D4E9BC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{078E45C8-9F21-47A6-A23A-76514D4E9BC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{078E45C8-9F21-47A6-A23A-76514D4E9BC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{078E45C8-9F21-47A6-A23A-76514D4E9BC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6341620-9648-402D-86EF-96A6489F6027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6341620-9648-402D-86EF-96A6489F6027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6341620-9648-402D-86EF-96A6489F6027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6341620-9648-402D-86EF-96A6489F6027}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

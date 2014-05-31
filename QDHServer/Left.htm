@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>千岛湖广告发布系统</title>
+    <link href="Css/default.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="js/themes/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="js/themes/icon.css" />
+    <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.1.2.2.js"></script>
+    <script type="text/javascript" src='js/outlook2.js'> </script>
+    <script type="text/javascript">
+        var _menus = { "menus": [
+							{ "menuid": "1", "icon": "icon-adFabu", "menuname": "终端管理",
+							    "menus": [
+									{ "menuid": "13", "menuname": "分组管理", "icon": "icon-jiemu", "url": "ad/TerminalManagements/GroupManagements/GroupManagement.aspx" },
+								    { "menuid": "14", "menuname": "终端管理", "icon": "icon-time", "url": "ad/TerminalManagements/TerminalManagements/TerminalManagement.aspx" },
+                                    { "menuid": "15", "menuname": "终端版本", "icon": "icon-time", "url": "ad/TerminalManagements/TerminalVersions/TerminalVersion.aspx" }
+                                ]
+							}
+                            , { "menuid": "8", "icon": "icon-setOpenClose", "menuname": "广告管理",
+                                "menus": [{ "menuid": "21", "menuname": "屏保广告", "icon": "icon-setClose", "url": "ad/ADManagements/ScreenAD.aspx" },
+									 { "menuid": "22", "menuname": "视频广告", "icon": "icon-setClose", "url": "ad/ADManagements/VideoAD.aspx" },
+								{ "menuid": "23", "menuname": "文字广告", "icon": "icon-setClose", "url": "ad/ADManagements/WordAD.aspx" }
+                                ]
+                            }
+                             , { "menuid": "9", "icon": "icon-setOpenClose", "menuname": "广告发布",
+                                 "menus": [{ "menuid": "24", "menuname": "广告资源池", "icon": "icon-setClose", "url": "ad/ADFabu/ADResourcePool.aspx" },
+									 { "menuid": "25", "menuname": "节目单审核", "icon": "icon-setClose", "url": "ad/ADFabu/ProgramLook.aspx" },
+								{ "menuid": "26", "menuname": "节目单发布", "icon": "icon-setClose", "url": "ad/ADFabu/ProgramFabu.aspx" },
+                                { "menuid": "27", "menuname": "节目单插播", "icon": "icon-setClose", "url": "ad/ADFabu/ProgramCutnews.aspx" }
+                                ]
+                             }
+				]
+        };
+
+        //关闭登录窗口
+        $(function () {
+            $('#loginOut').click(function () {
+                $.messager.confirm('系统提示', '您确定要退出本次登录吗?', function (r) {
+
+                    if (r) {
+                        //location.href = 'Login.aspx';
+                        window.close();
+                    }
+                });
+            })
+        });
+    </script>
+</head>
+<body class="easyui-layout" style="overflow-y: hidden" scroll="no">
+    <noscript>
+        <div style="position: absolute; z-index: 100000; height: 2046px; top: 0px; left: 0px;
+            width: 100%; background: white; text-align: center;">
+            <!--    <img src="images/noscript.gif" alt='抱歉，请开启脚本支持！' />-->
+        </div>
+    </noscript>
+    <div region="north" split="true" border="false" style="overflow: hidden; height: 30px;
+        background: url(images/layout-browser-hd-bg.gif) #7f99be repeat-x center 50%;
+        line-height: 20px; color: #fff; font-family: Verdana, 微软雅黑,黑体">
+        <span style="float: right; padding-right: 20px;" class="head">&nbsp;V1.0&nbsp;&nbsp;&nbsp;
+            <a href="#" id="loginOut">安全退出</a></span><span style="padding-left: 10px; font-size: 16px;">千岛湖广告发布系统</span>
+    </div>
+    <div region="west" hide="true" split="true" title="导航菜单" style="width: 180px;" id="west">
+        <div id="nav" class="easyui-accordion" fit="true" border="false">
+            <!--  导航内容 -->
+        </div>
+    </div>
+    <div id="mainPanle" region="center" style="background: #eee; overflow-y: hidden">
+        <div id="tabs" class="easyui-tabs" fit="true" border="false">
+        </div>
+    </div>
+    <div id="mm" class="easyui-menu" style="width: 150px;">
+        <div id="mm-tabupdate">
+            刷新</div>
+        <div class="menu-sep">
+        </div>
+        <div id="mm-tabclose">
+            关闭</div>
+        <div id="mm-tabcloseall">
+            全部关闭</div>
+        <div id="mm-tabcloseother">
+            除此之外全部关闭</div>
+        <div class="menu-sep">
+        </div>
+        <div id="mm-tabcloseright">
+            当前页右侧全部关闭</div>
+        <div id="mm-tabcloseleft">
+            当前页左侧全部关闭</div>
+        <div class="menu-sep">
+        </div>
+    </div>
+</body>
+</html>

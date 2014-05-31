@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="loading">
+<head>
+    <!--unit name="网站参数"-->网站参数<!--/unit-->
+    <link rel="stylesheet" href="css/Global.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/tango/skin.css"/>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/MSClass.js"></script>
+    <script src="scripts/jquery.jcarousel.min.js"></script>
+    <script src="scripts/common.js?time=new Date().getTime()"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="main bg1 posa">
+        <div class="icon1 icon_next"></div>
+        <div class="icon1 icon_prev"></div>
+        <input type="hidden" name="ColumnID" id="ColumnID" value="{#ColumnID}" />
+        <div class="header clearfix">
+            <span class="back" style="margin-top: 94px;"><!--unit name="返回按钮"-->返回按钮<!--/unit--></span>
+            <div class="position"><!--unit name="列表_当前位置"-->列表_当前位置<!--/unit--></div>
+        </div>
+        <div class="newslist" id="newslist">
+        </div>
+        <div class="xkpage"></div>
+        <script type="text/javascript">
+            window._CurPage = "";
+            window.PageCount = "";
+            function reset() {
+                $("input[type='text'][id='ColumnID']").val("");
+            }
+            function getInfo(CurPage) {
+                var $ColumnID = $("#ColumnID");
+                _CurPage = CurPage;
+                if (_CurPage == "" || _CurPage == undefined) {
+                    _CurPage = "1";
+                }
+                $.ajax( {
+                    type: "post",
+                    dataType: "json",
+                    url: "/webajax.aspx?Time=" + (new Date().getTime()), //目标地址
+                    data: {
+                        Action: "NewsList",
+                        PageNo: _CurPage,
+                        ColumnID: $ColumnID.val()
+                    },
+                    beforeSend: function() {
+                        $( "#newslist").html('<div><img src="images/Loading.gif" /></div>');
+                    },
+                    success: function( d ) {
+                        var html = "";
+                        if (d.RecordCount > 0) {
+                            if (d.RecordCount > 7) {
+                                $(".icon1").show();
+                            };
+                            PageCount = d.PageCount;
+                            $.each(d.list,function(i,v) {
+                                html += '<a href="/Art/Art_' + v.ColumnID + '/Art_' + v.ColumnID + '_' + v.NewsID + '.aspx"><dl>';
+                                html += '<dt>' + v.NewsTitle + '</dt>';
+                                html += '<dd class="pic"><img src="' + v.NewsImages + '" alt="' + v.NewsTitle + '""/></dd>';
+                                html += '<dd class="txt">' + v.NewsBrief;
+                                //html += '<span>' + v.PostTime + '</span>';
+                                html += '</dd>';
+                                html += "</dl></a>";
+                            })
+                        } else {
+                            //html += "<span>暂无信息</span>";
+                        }
+                        $( "#newslist").html(html);
+                        var _div = "";
+                        if (_CurPage < 5 && PageCount <= 5) {
+                            //_div += "共 " + d.RecordCount + " 条记录";
+                            //_div += " 共 " + PageCount + " 页 ";
+
+                            for (var i = 1; i <= PageCount; i++) {
+                                _div += '<a rel="' + i + '" href="javascript:;" class="a-num" onclick="getInfo(' + i + ')">' + i + '</a>';
+
+                            }
+                            //_div += '<a href="javascript:;" class="a-num" ' +
+                            //'onclick="getInfo(' + d.PageCount + ')">尾页</a>';
+
+                        }
+                        else if (_CurPage < 5 && PageCount > 5) {
+                            //_div += "共 " + d.RecordCount + " 条记录";
+                            //_div += " 共 " + PageCount + " 页 ";
+                            for (var i = 1; i <= 5; i++) {
+                                _div += '<a rel="' + i + '" href="javascript:;" class="a-num" onclick="getInfo(' + i + ')">' + i + '</a>';
+
+                            }
+                            //_div += '<a href="javascript:;" class="a-num" ' +
+                            //'onclick="getInfo(' + d.PageCount + ')">尾页</a>';
+                        }
+                        else if (_CurPage > d.PageCount - 4) {
+                            //_div += "共 " + d.RecordCount + " 条记录";
+                            //_div += " 共 " + d.PageCount + " 页 ";
+                            //_div += '<a href="javascript:;" class="a-num" ' +
+                            //'onclick="getInfo(1)">首页</a>';
+                            _div += '<a rel="' + (d.PageCount - 4) + '" href="javascript:;" class="a-num" onclick="getInfo(' + (d.PageCount - 4) + ')">' + (d.PageCount - 4) + '</a>';
+                            _div += '<a rel="' + (d.PageCount - 3) + '" href="javascript:;" class="a-num" onclick="getInfo(' + (d.PageCount - 3) + ')">' + (d.PageCount - 3) + '</a>';
+                            _div += '<a rel="' + (d.PageCount - 2) + '" href="javascript:;" class="a-num" onclick="getInfo(' + (d.PageCount - 2) + ')">' + (d.PageCount - 2) + '</a>';
+                            _div += '<a rel="' + (d.PageCount - 1) + '" href="javascript:;" class="a-num" onclick="getInfo(' + (d.PageCount - 1) + ')">' + (d.PageCount - 1) + '</a>';
+                            _div += '<a rel="' + (d.PageCount) + '" href="javascript:;" class="a-num" onclick="getInfo(' + d.PageCount + ')">' + d.PageCount + '</a>';
+                        } else {
+                            //_div += "共 " + d.RecordCount + " 条记录";
+                            //_div += " 共 " + d.PageCount + " 页 ";
+                            // _div += '<a href="javascript:;" class="a-num" ' +
+                            //'onclick="getInfo(1)">首页</a>';
+                            for (var i = -2; i <= 2; i++) {
+                                _div += '<a rel="' + (_CurPage + i) + '" href="javascript:;" class="a-num" onclick="getInfo(' + (_CurPage + i) + ')">' + (_CurPage + i) + '</a>';
+                            }
+                            //_div += '<a href="javascript:;" class="a-num" ' +
+                            //'onclick="getInfo(' + d.PageCount + ')">尾页</a>';
+                        }
+                        $(".xkpage").html(_div);
+                        $(".xkpage a[rel=" + _CurPage + "]").attr("class", "current1");
+                    },
+                    error: function( XMLHttpRequest, textStatus, errorThrown ) {
+                        console.log(XMLHttpRequest.status);
+                        console.log(XMLHttpRequest.readyState);
+                        console.log(textStatus);
+                    }
+                } )
+            };
+            $(".icon_next").on("click", function(){
+                if (_CurPage < PageCount) {
+                    getInfo(_CurPage + 1);
+                }
+            })
+            $(".icon_prev").on("click", function(){
+                if (_CurPage > 1) {
+                    getInfo(_CurPage - 1);
+                }
+            })
+        </script>
+        <div class="bottom">
+            <div id="hottitle" class="hot">
+                <ul id="ulid">
+                    <!--unit name="网站底部"-->网站底部<!--/unit-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        getInfo(1);
+    })
+    new Marquee(["hottitle","ulid"],2,2,986,103,20,0,0);
+</script>
+<!--unit name="页面加载"-->页面加载<!--/unit-->
+</body>
+</html>

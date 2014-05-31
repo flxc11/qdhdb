@@ -1,0 +1,71 @@
+﻿body 
+{
+	margin:0px;
+}
+html
+{
+	margin:0px;}
+
+.MenuHide{
+	position:relative;
+	font-size:12px;
+	font-weight:bold;
+	color:#215DC6; 
+	height: 34px;
+	line-height: 34px;
+	cursor: hand;
+	background: url(../images/title_bg_hide.gif) no-repeat 18px;			
+	text-indent: 68px;
+	background-color:#f2f2f2;
+	margin-top:2px;
+}
+
+.MenuShow{
+	position:relative;
+	font-size:12px;
+	font-weight:bold;
+	color:#215DC6; 
+	height: 34px;
+	line-height: 34px;
+	cursor: hand;
+	background: url(../images/title_bg_show.gif) no-repeat 18px;			
+	text-indent: 68px;
+	background-color:#f2f2f2;
+	margin-top:2px;
+}
+
+.SubMenuShow{
+	position:relative;
+    display:inline ;
+    cursor:hand ;
+}
+
+.SubMenuHide{
+	position : relative ;
+    display:none ;
+    cursor:hand ;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	border-left:1px solid white;
+	border-right:1px solid white; 
+	border-bottom:1px solid white; 
+	overflow:hidden; 
+	background:#f8f8f8;
+	margin-bottom: 3px;		
+}
+	
+li{
+	margin: 0;
+	padding:5px 3px 3px 3px;
+	list-style: none;
+	height: 20px;
+	line-height: 20px;
+	background: url(../images/ico.gif) no-repeat 48px;
+	text-indent: 65px;
+}
+
+a  { font:normal 12px 宋体; color:#000000; text-decoration:none; }
+a:hover  { color:#428EFF;text-decoration:underline;font-weight:bold; }

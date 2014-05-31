@@ -1,0 +1,1 @@
+﻿var AutoThumbnail = 0;var AutoWatermark = 0;
